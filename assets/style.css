@@ -122,7 +122,7 @@ img[width="60px"] {
     border: 2px solid #14bdac;
 }
 
-/* ========== TABEL KHUSUS UNTUK ROWSPAN/COLSPAN (contoh di mahasiswa.html) ========== */
+/* ========== TABEL KHUSUS UNTUK ROWSPAN/COLSPAN (contoh di mahasiswa.php) ========== */
 /* Tabel terakhir di halaman mahasiswa */
 table:last-of-type {
     background: #fef7e0;
