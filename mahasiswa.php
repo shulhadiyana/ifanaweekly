@@ -1,3 +1,16 @@
+<?php
+
+    require "fungsi.php";
+
+    $qmhs = "SELECT * FROM mahasiswa";
+
+    $mahasiswas = tampildata($qmhs); //array isinya data mahasiswa
+
+    
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,40 +37,37 @@
     </a>
     <table border="1" cellpadding="10px">
         <tr>
-            <th rowspan="2">No</th>
-            <th rowspan="2">Nama</th>
-            <th rowspan="2">Foto</th>
-            <th colspan="3">Nilai</th>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Nim</th>
+            <th>Jurusan</th>
+            <th>Email</th>
+            <th>No.HP</th>
+            <th>foto</th>
+            <th>Aksi</th>
         </tr>
+        <?php
+            $i = 1;
+          foreach($mahasiswas as $mhs) //array mahasiswas data mhs
+            {
+        ?>
+
         <tr>
-            <th>UTS</th>
-            <th>UAS</th>
-            <th>TUGAS</th>
-        </tr>   
-        <tr>
-            <td align="center">1</td>
-            <td>Muhaliman Sudibyo</td>
-            <td><img src="assets/images/kuciang.jpeg" alt="foto" width="60px"></td>
-            <td align="center">90</td>
-            <td align="center">90</td>
-            <td align="center">90</td>
+            <td align="center"><?= $i?></td>
+            <td><?= $mhs["nama"]?></td>
+            <td><?= $mhs["nim"]?></td>
+            <td><?= $mhs["jurusan"]?></td>
+            <td><?= $mhs["Email"]?></td>
+            <td><?= $mhs["no_hp"]?></td>
+            <td><img src="assets/images/<?= $mhs["foto"]?>" alt="foto" width="60px"></td>
+            <td>
+                <a herf="editdata.php"><button>Edit</button></a> | <a herf="deletedata.php">Hapus</button></a>
+            </td>
         </tr>
-        <tr>
-            <td align="center">2</td>
-            <td>Patrick</td>
-            <td><img src="assets/images/patrick.jpeg" alt="foto" width="60px"></td>
-            <td align="center">89</td>
-            <td align="center">95</td>
-            <td align="center">87</td>
-        </tr>
-        <tr>
-            <td align="center">3</td>
-            <td>mahmud</td>
-            <td><img src="assets/images/mahmud.jpeg" alt="foto" width="60px"></td>
-            <td align="center">90</td>
-            <td align="center">93</td>
-            <td align="center">80</td>
-        </tr>
+        <?php
+            $i++;
+            }
+        ?>
     </table>
     <hr/>
     <br>

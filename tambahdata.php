@@ -11,29 +11,34 @@
     <form action="mahasiswa.php" method="post">
         <table cellpadding="5px">
             <tr>
-                <td><label for="Nama">Nama </label></td>
+                <td><label for="nama">Nama </label></td>
                 <td>:</td>
-                <td><input type="text" id="Nama" name="Nama"/></td>
+                <td><input type="text" id="nama" name="nama" require/></td>
             </tr>
             <tr>
-                <td><label for="Foto">Foto </label></td>
+                <td><label for="nim">NIM </label></td>
                 <td>:</td>
-                <td><input type="file" id="Foto" name="Foto"/></td>
+                <td><input type="number" id="nim" name="nim" require/></td>
             </tr>
             <tr>
-                <td><label for="UTS">UTS </label></td>
+                <td><label for="jurusan">Jurusan </label></td>
                 <td>:</td>
-                <td><input type="number" id="UTS" name="UTS"/></td>
+                <td><input type="text" id="jurusan" name="jurusan" require/></td>
             </tr>
             <tr>
-                <td><label for="UAS">UAS </label></td>
+                <td><label for="Email">Email </label></td>
                 <td>:</td>
-                <td><input type="number" id="UAS" name="UAS"/></td>
+                <td><input type="email" id="Email" name="Email"/></td>
             </tr>
             <tr>
-                <td><label for="Tugas">Tugas </label></td>
+                <td><label for="no_hp">No HP </label></td>
                 <td>:</td>
-                <td><input type="number" id="Tugas" name="Tugas"/></td>
+                <td><input type="number" id="no_hp" name="no_hp"/></td>
+            </tr>
+            <tr>
+                <td><label for="foto">Foto </label></td>
+                <td>:</td>
+                <td><input type="text" id="foto" name="foto"/></td>
             </tr>
             <tr>
                 <td><button type="submit" name="submit"> Tambah </button></td>
