@@ -15,6 +15,35 @@ function tampildata($query)
     
     return $rows;
 }
+
+function tambahdata($data)
+{
+    global $koneksi;
+    $nama = htmlspecialchars($data["nama"]);
+    $nim = htmlspecialchars($data["nim"]);
+    $jurusan = htmlspecialchars($data["jurusan"]);
+    $email = htmlspecialchars($data["Email"]);
+    $nohp = htmlspecialchars($data["no_hp"]);
+    $foto = $data["foto"];
+
+    $query = "INSERT INTO mahasiswa (nama, nim, jurusan, Email, no_hp, foto) VALUES ('$nama', '$nim', '$jurusan', '$email', '$nohp', '$foto')";
+            
+    mysqli_query($koneksi, $query);
+
+    return mysqli_affected_rows($koneksi);
+
+}
+
+function hapusdata($id)
+{
+    global $koneksi;
+
+    $query = "DELETE FROM mahasiswa WHERE id=$id";
+
+    mysqli_query($koneksi, $query);
+
+    return mysqli_affected_rows($koneksi);
+}
     //$result = mysqli_query ($koneksi, $query);
     
     /// ambil data (fetch) dari lemari mahasiswa
